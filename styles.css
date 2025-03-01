@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #1a1a1a, #222222);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+}
+
+h1 {
+    color: #e0e0e0;
+    margin-top: 10px;
+}
+
+/* Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* Projects */
+.projects {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #e0e0e0;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Project Grid Layout */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.project {
+    background: linear-gradient(135deg, #252525, #2a2a2a);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #03a9f4, #ff4081);
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.project a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #03a9f4;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
